@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "nonupdate_reloaded",
+  "version": "${version}",
+
+  "name": "NonUpdate Reloaded",
+  "description": "Disable the network connections that are not in the whitelist to prevent update checks and more",
+  "authors": ["Tigercrl"],
+  "contact": {},
+
+  "license": "GNU GPL 3.0",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.tigercrl.nonupdatereloaded.fabric.NonUpdateReloadedFabric"
+    ]
+  },
+  "mixins": [
+    "nonupdate_reloaded.mixins.json",
+    "nonupdate_reloaded-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.6",
+    "minecraft": ">=1.20.1"
+  }
+}
