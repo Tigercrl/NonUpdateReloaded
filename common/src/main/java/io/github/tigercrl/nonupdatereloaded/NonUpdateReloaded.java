@@ -17,7 +17,7 @@ public class NonUpdateReloaded {
     public static void init() {
         AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
-        ReflectionHelper.setSecurityManager(new NonUpdateSecutityManager());
+        ReflectionHelper.setSecurityManager(new NonUpdateSecurityManager());
         LOGGER.info("NonUpdateReloaded initialized!");
     }
 

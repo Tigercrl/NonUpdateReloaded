@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.security.Permission;
 
 
-public class NonUpdateSecutityManager extends SecurityManager {
+public class NonUpdateSecurityManager extends SecurityManager {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final Unsafe unsafe = ReflectionHelper.getUnsafe();
 
