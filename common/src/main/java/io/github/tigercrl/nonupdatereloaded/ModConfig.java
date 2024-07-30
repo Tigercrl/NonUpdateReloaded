@@ -5,6 +5,9 @@ import me.shedaniel.autoconfig.annotation.Config;
 
 @Config(name = NonUpdateReloaded.MOD_ID)
 public class ModConfig implements ConfigData {
-    public String[] whitelist = new String[0];
+    public boolean isWhitelist = true;
+    public String[] list = new String[]{
+            "$r.+\\.mojang\\.com"
+    };
     public boolean allowServerConnects = true;
 }
