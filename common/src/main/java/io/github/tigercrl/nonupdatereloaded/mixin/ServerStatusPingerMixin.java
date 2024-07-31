@@ -3,6 +3,7 @@ package io.github.tigercrl.nonupdatereloaded.mixin;
 import io.github.tigercrl.nonupdatereloaded.NonUpdateReloaded;
 import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.multiplayer.ServerStatusPinger;
+import net.minecraft.client.multiplayer.resolver.ServerAddress;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,8 +20,8 @@ public class ServerStatusPingerMixin {
     }
 
     @Inject(method = "pingLegacyServer", at = @At("RETURN"))
-    private void pingLegacyServer(InetSocketAddress inetSocketAddress, ServerData serverData, CallbackInfo ci) {
+    private void pingLegacyServer(InetSocketAddress inetSocketAddress, ServerAddress serverAddress, ServerData serverData, CallbackInfo ci) {
         if (NonUpdateReloaded.config.allowServerConnects)
-            NonUpdateReloaded.addTempWhitelist(serverData.ip);
+            NonUpdateReloaded.addTempWhitelist(serverAddress.getHost() + ":" + serverAddress.getPort());
     }
 }
