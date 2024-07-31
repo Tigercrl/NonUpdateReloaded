@@ -5,6 +5,11 @@ import me.shedaniel.autoconfig.annotation.Config;
 
 @Config(name = NonUpdateReloaded.MOD_ID)
 public class ModConfig implements ConfigData {
-    public String[] whitelist = new String[0];
+    public boolean isWhitelist = true;
+    public String[] list = new String[]{
+            "$eminecraftservices.com",
+            "$emojang.com",
+            "$eminecraft.net"
+    };
     public boolean allowServerConnects = true;
 }

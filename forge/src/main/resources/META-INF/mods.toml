@@ -64,3 +64,9 @@ Disable the network connections that are not in the whitelist to prevent update 
    versionRange="[1.20.1,1.21)"
    ordering="NONE"
    side="BOTH"
+[[dependencies.nonupdate_reloaded]]
+   modId="cloth_config"
+   mandatory=true
+   versionRange="[11.1.118,)"
+   ordering="NONE"
+   side="BOTH"

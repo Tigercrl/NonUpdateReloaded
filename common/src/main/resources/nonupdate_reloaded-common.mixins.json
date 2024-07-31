@@ -6,6 +6,8 @@
   "mixins": [
   ],
   "client": [
+    "ConnectScreenMixin",
+    "ServerStatusPingerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
