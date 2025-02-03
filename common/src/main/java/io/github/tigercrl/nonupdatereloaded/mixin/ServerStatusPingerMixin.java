@@ -14,7 +14,7 @@ import java.net.InetSocketAddress;
 @Mixin(ServerStatusPinger.class)
 public class ServerStatusPingerMixin {
     @Inject(method = "pingServer", at = @At("HEAD"))
-    private void pingServer(ServerData serverData, Runnable runnable, CallbackInfo ci) {
+    private void pingServer(ServerData serverData, Runnable runnable, Runnable runnable2, CallbackInfo ci) {
         if (NonUpdateReloaded.config.allowServerConnects)
             NonUpdateReloaded.addTempWhitelist(serverData.ip);
     }
