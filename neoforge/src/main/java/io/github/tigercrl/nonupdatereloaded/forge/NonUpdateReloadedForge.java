@@ -1,7 +1,7 @@
 package io.github.tigercrl.nonupdatereloaded.forge;
 
 import io.github.tigercrl.nonupdatereloaded.NonUpdateReloaded;
-import net.minecraftforge.fml.common.Mod;
+import net.neoforged.fml.common.Mod;
 
 @Mod(NonUpdateReloaded.MOD_ID)
 public class NonUpdateReloadedForge {

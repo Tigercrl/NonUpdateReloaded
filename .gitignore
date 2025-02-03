@@ -25,19 +25,19 @@ replay_pid*
 
 # runs
 /fabric/run
-/forge/run
+/neoforge/run
 
 # gradle
 .gradle
 /common/.gradle
 /fabric/.gradle
-/forge/.gradle
+/neoforge/.gradle
 
 # builds
 /build
 /common/build
 /fabric/build
-/forge/build
+/neoforge/build
 
 # Editor directories and files
 .vscode/*
