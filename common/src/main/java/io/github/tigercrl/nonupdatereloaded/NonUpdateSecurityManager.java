@@ -83,7 +83,9 @@ public class NonUpdateSecurityManager extends SecurityManager {
     @Override
     public void checkConnect(String host, int port) {
         if (isBlocked(host, port)) {
-            LOGGER.info("Blocked connection to {}{}", host, port > 0 ? ":" + port : "");
+            if(NonUpdateReloaded.config.logBlockedConnections) {
+                LOGGER.info("Blocked connection to {}{}", host, port > 0 ? ":" + port : "");
+            }
             coverString(host, "0.0.0.0");
         }
     }
