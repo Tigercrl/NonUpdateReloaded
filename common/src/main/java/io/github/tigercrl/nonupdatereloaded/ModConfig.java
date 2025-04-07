@@ -12,4 +12,5 @@ public class ModConfig implements ConfigData {
             "$eminecraft.net"
     };
     public boolean allowServerConnects = true;
+    public boolean logBlockedConnections = false;
 }
